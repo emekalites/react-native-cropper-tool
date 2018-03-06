@@ -1,1 +1,1 @@
-# React-Native Image Cropper Tool
+# react-native-cropper-tool
