@@ -1,4 +1,21 @@
+#example
+Example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# folders
 node_modules
 android/build
 android/build/*
-Example
+android/app/build
+android/app/libs
+android/app/build/*
+android/.idea
+android/.idea/*
+android/.gradle
+android/.gradle/*
+android/local.properties
+
