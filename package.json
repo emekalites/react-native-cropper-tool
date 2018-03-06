@@ -1,0 +1,10 @@
+{
+  "name": "react-native-cropper-tool",
+  "version": "0.0.1",
+  "private": false,
+  "author": "Chukwuemeka Ihedoro <caihedoro@gmail.com>",
+  "scripts": {
+    "test": "jest"
+  },
+  "homepage": "https://github.com/emekalites/react-native-cropper-tool.git"
+}
