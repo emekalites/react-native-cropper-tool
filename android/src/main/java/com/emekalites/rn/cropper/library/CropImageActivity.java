@@ -10,7 +10,7 @@
 // - Sun Tsu,
 // "The Art of War"
 
-package com.emekalites.rn.cropper.tool.library;
+package com.emekalites.rn.cropper.library;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -59,7 +59,7 @@ public class CropImageActivity extends AppCompatActivity
     super.onCreate(savedInstanceState);
     setContentView(R.layout.crop_image_activity);
 
-    mCropImageView = findViewById(R.id.cropImageView);
+    mCropImageView = (CropImageView) findViewById(R.id.cropImageView);
 
     Bundle bundle = getIntent().getBundleExtra(CropImage.CROP_IMAGE_EXTRA_BUNDLE);
     mCropImageUri = bundle.getParcelable(CropImage.CROP_IMAGE_EXTRA_SOURCE);

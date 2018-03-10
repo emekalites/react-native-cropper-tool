@@ -10,7 +10,7 @@
 // - Sun Tsu,
 // "The Art of War"
 
-package com.emekalites.rn.cropper.tool.library;
+package com.emekalites.rn.cropper.library;
 
 import android.content.Context;
 import android.graphics.Bitmap;

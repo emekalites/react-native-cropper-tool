@@ -1,4 +1,4 @@
-package com.emekalites.rn.cropper.tool;
+package com.emekalites.rn.cropper.utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -63,7 +63,7 @@ public class MediaUtils {
         return outFile;
     }
 
-    public static Uri getImageUri(Context context, String url, String folderName) {
+    public static Uri getImageUrl(Context context, String url, String folderName) {
         try {
             URL mUrl = new URL(url);
             HttpURLConnection connection = (HttpURLConnection) mUrl.openConnection();

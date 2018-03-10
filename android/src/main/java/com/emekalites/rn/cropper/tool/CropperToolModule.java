@@ -1,27 +1,19 @@
 package com.emekalites.rn.cropper.tool;
 
-public class CropperToolModule extends ReactContextBaseJavaModule {
+import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.bridge.ReactContextBaseJavaModule;
 
-    private final static String TAG = ANModule.class.getCanonicalName();
+/**
+ * Created by emnity on 3/10/18.
+ */
 
+class CropperToolModule extends ReactContextBaseJavaModule {
     public CropperToolModule(ReactApplicationContext reactContext) {
         super(reactContext);
     }
 
     @Override
     public String getName() {
-        return "ImageCropperTool";
-    }
-
-    @ReactMethod
-    public void setImage(final ReadableMap options, final Callback successCb, final Callback failureCb) {
-    }
-
-    @ReactMethod
-    public void cropImage(final Callback successCb, final Callback failureCb) {
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        return "ImageCropperView";
     }
 }
