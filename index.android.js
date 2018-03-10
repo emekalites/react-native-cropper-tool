@@ -3,15 +3,28 @@
 import { NativeModules } from 'react-native';
 const { ImageCropperTool } = NativeModules;
 
-const DEFAULT_OPTIONS = {};
+const DEFAULT_OPTIONS = {
+    guideLines: "on",
+    cropShape: "rectangle",
+    externalDirectoryName: "CropImage",
+    autoZoomEnabled: false,
+    fixAspectRatio: false,
+    showCropOverlay: true,
+    showProgressBar: false
+};
 
-module.exports = {
-    ...ImageCropperTool,
-    selectImage:function selectImage(options, callback){
+export default {
+    setImage: setImage = (options) => {
         if (typeof options === 'function') {
-            callback = options;
             options = {};
         }
-        return ImageCropperTool.selectImage({...DEFAULT_OPTIONS, ...options}, callback);
+        return new Promise((resolve, reject) => {
+            ImageCropperTool.setImage({...DEFAULT_OPTIONS, ...options});
+        });
+    },
+    cropImage: cropImage = () => {
+        return new Promise((resolve, reject) => {
+            ImageCropperTool.cropImage();
+        });
     }
 };
