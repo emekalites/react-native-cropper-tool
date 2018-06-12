@@ -10,7 +10,7 @@
 // - Sun Tsu,
 // "The Art of War"
 
-package com.emekalites.rn.cropper.library;
+package com.emekalites.rcropper.library;
 
 import android.app.Activity;
 import android.content.Context;
@@ -35,7 +35,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-import com.emekalites.rn.cropper.tool.R;
+import com.emekalites.rcropper.tool.R;
 
 import java.lang.ref.WeakReference;
 import java.util.UUID;

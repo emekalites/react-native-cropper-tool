@@ -1,4 +1,6 @@
-package com.emekalites.rn.cropper.tool;
+package com.emekalites.rcropper.tool;
+
+import android.app.Activity;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -8,12 +10,17 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
  */
 
 class CropperToolModule extends ReactContextBaseJavaModule {
+
     public CropperToolModule(ReactApplicationContext reactContext) {
         super(reactContext);
     }
 
     @Override
     public String getName() {
-        return "ImageCropperView";
+        return "ImageCropperModule";
+    }
+
+    public Activity getActivity() {
+        return this.getCurrentActivity();
     }
 }

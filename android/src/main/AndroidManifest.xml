@@ -1,8 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.emekalites.rn.cropper.tool">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <application>
-        <activity android:name="com.emekalites.rn.cropper.library.CropImageActivity"/>
-    </application>
+    package="com.emekalites.rcropper.tool">
 </manifest>

@@ -1,7 +1,6 @@
 import groovy.json.JsonSlurper
 
 def computeVersionName() {
-    // dynamically retrieve version from package.json
     def slurper = new JsonSlurper()
     def json = slurper.parse(file('../package.json'), "utf-8")
     return json.version
@@ -10,12 +9,12 @@ def computeVersionName() {
 apply plugin: "com.android.library"
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 27
+    buildToolsVersion "26.0.3"
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 22
+        targetSdkVersion 27
         versionCode 1
         versionName computeVersionName()
     }
@@ -27,6 +26,5 @@ repositories {
 
 dependencies {
     compile "com.facebook.react:react-native:+"  // From node_modules
-    compile 'com.android.support:exifinterface:23.1.0'
+    compile 'com.android.support:exifinterface:27.1.1'
 }
-

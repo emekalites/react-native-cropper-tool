@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.emekalites.rn.cropper.tool.CropperView"
+    tools:context="com.emekalites.rcropper.tool.CropperMainView"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
 
-    <com.emekalites.rn.cropper.library.CropImageView
+    <com.emekalites.rcropper.library.CropImageView
         android:id="@+id/cropImageView"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"

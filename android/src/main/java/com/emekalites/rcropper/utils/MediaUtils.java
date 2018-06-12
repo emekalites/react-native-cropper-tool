@@ -1,4 +1,4 @@
-package com.emekalites.rn.cropper.utils;
+package com.emekalites.rcropper.utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -23,9 +24,7 @@ import java.net.URL;
 public class MediaUtils {
     private static final String TAG = MediaUtils.class.getSimpleName();
 
-    public static File saveImageFromBitmap(Context context, Bitmap bitmap, String folderName) throws Exception{
-
-        FileOutputStream outStream = null;
+    private static File createNoMediaFolder(String folderName) throws Exception {
         File dir = null;
         if (folderName != null && !folderName.isEmpty()) {
             File sdCard = Environment.getExternalStorageDirectory();
@@ -34,6 +33,16 @@ public class MediaUtils {
             dir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM), "");
         }
         dir.mkdirs();
+        File tempFolder = new File(dir, "temp");
+        tempFolder.mkdirs();
+        File noMedia = new File(tempFolder, ".nomedia");
+        noMedia.createNewFile();
+        return tempFolder;
+    }
+
+    public static File saveImageFromBitmap(Context context, Bitmap bitmap, String folderName) throws Exception{
+        FileOutputStream outStream = null;
+        File dir = createNoMediaFolder(folderName);
         String fileName = String.format("%d.jpg", System.currentTimeMillis());
         File outFile = new File(dir, fileName);
         outStream = new FileOutputStream(outFile);
