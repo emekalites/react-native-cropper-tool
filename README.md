@@ -13,7 +13,7 @@ First you need to install react-native-cropper-tool:
 ```sh
 npm install react-native-cropper-tool --save
 or 
-yarn add react-native-cropper-tool --save
+yarn add react-native-cropper-tool
 ```
 
 Second you need to link react-native-cropper-tool:
