@@ -1,10 +1,24 @@
 {
   "name": "react-native-cropper-tool",
   "version": "0.0.1",
-  "private": false,
-  "author": "Chukwuemeka Ihedoro <caihedoro@gmail.com>",
+  "description": "image cropper tool for react-native",
+  "main": "index.android.js",
   "scripts": {
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/emekalites/react-native-cropper-tool.git"
+  "bugs": {
+	"url": "https://github.com/emekalites/react-native-cropper-tool/issues"
+  },
+  "repository": {
+	"type": "git",
+	"url": "https://github.com/emekalites/react-native-cropper-tool.git"
+  },
+  "keywords": [
+	"react-native",
+	"image",
+	"cropper"
+  ],
+  "author": "Chukwuemeka Ihedoro <caihedoro@gmail.com>",
+  "homepage": "https://github.com/emekalites/react-native-cropper-tool.git",
+  "license": "MIT"
 }
